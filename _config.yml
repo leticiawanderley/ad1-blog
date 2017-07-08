@@ -3,7 +3,7 @@ title: Blog AD1
 email: leticiafwanderley@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Portifólio de análises feitas para a disciplina de Análise de Dados 1 do curso de Ciência da Computação da Universidade Federal de Campina Grande
-baseurl: "/ad1-blog" # the subpath of your site, e.g. /blog/
+baseurl: "/ad1-blog/" # the subpath of your site, e.g. /blog/
 url: "http://leticiawanderley.github.io/ad1-blog/" # the base hostname & protocol for your site
 twitter_username: wanderleylf
 github_username:  leticiawanderley
