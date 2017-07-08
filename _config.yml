@@ -9,5 +9,6 @@ twitter_username: wanderleylf
 github_username:  leticiawanderley
 permalink: /:year/:month/:title.html
 
-# Build settings
+#Build settings
 markdown: kramdown
+exclude: [vendor]

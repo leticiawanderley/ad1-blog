@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Nova análise de sitcoms vs. dramas"
+author: "Leticia Wanderley"
+date: `r Sys.time()`
+published: true
+tags: [htmlwidgets, r]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("tidyverse")
+library("plotly")
+dados = read_csv("series_from_imdb.csv")
+series = dados %>% 
+  filter(series_name %in% c("Modern Family", "Sherlock", "House of Cards", "How I Met Your Mother"))
+```
+
+## Revisitando uma visualização
+
+```{r series, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, fig.align="center"}
+graph <- 
+  series %>%
+    ggplot(aes(x=series_ep, y=UserRating, colour=series_name, alpha=season)) + 
+    theme_bw() +
+    geom_smooth(aes(colour=series_name, fill=series_name),
+                size=.5, method = 'loess', alpha=.2) +
+    geom_point(aes(text=paste('Nome:', Episode, '<br>Nota:', UserRating, 
+                              '<br>Temporada:', season, '<br>Episódio:', series_ep)), size=.9) +
+    scale_alpha_continuous(range = c(0.3, 1)) +
+    facet_wrap(~series_name, scales="free_x") +
+    theme(legend.title=element_blank()) +
+    theme(legend.position="none") +
+    labs(title="Variação das notas dos usuários por episódio", x="Episódio", y="")
+ggplotly(graph, tooltip = c("text"), width = 850, height = 450)
+```
+
+Os gráficos acima representam a evolução das notas dadas por usuários do site [IMDb](http://www.imdb.com/) aos episódios das séries House of Cards, How I Met your Mother, Modern Family e Sherlock. Cada ponto representa um episódio da série e o tom dos pontos escurece de acordo com a temporada que pertencem. As séries How I Met Your Mother e Modern Family têm mais temporadas e episódios, também têm notas mais baixas, em geral, e uma tendência de queda nas notas dos episódios. Isso quer dizer que para estas duas séries a medida que se avança nas temporadas e nos episódios da série as notas diminuem. Já Sherlock e House of Cards têm menos temporadas e notas mais altas com uma leve tendência positiva nas notas, o que significa que a medida que se avança nas temporadas e episódios as notas atribuídas pelos usuários aumentam de valor.
