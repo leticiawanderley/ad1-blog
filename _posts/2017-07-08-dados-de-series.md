@@ -33,7 +33,7 @@ series %>%
   labs(x="Nome da série", y="Mediana das notas", title="Série mais bem avaliada")
 {% endhighlight %}
 
-![plot of chunk boxplot](/ad1-blogfigure/source/dados-de-series/2017-07-08-dados-de-series/boxplot-1.png)
+![plot of chunk boxplot](/ad1-blog/figure/source/dados-de-series/2017-07-08-dados-de-series/boxplot-1.png)
 
 Nos boxplots acima se pode ver que a mediana e a nota máxima da série Sherlock são as maiores do conjunto analisado, seguidas por House of Cards e depois por How I Met Your Mother e Modern Family. Quando se observa a nota mínima tem se um resultado um pouco diferente, a série com a maior nota mínima é House of Cards, é essa, também, a série que tem a menor variação entre as notas atribuídas por episódio. Já How I Met Your Mother tem a menor nota mínima do conjunto e também a maior variação de notas.
 
@@ -78,7 +78,7 @@ series %>%
   labs(title="Variação das notas dos usuários", x="Episódio", y="Nota")
 {% endhighlight %}
 
-![plot of chunk ratings](/ad1-blogfigure/source/dados-de-series/2017-07-08-dados-de-series/ratings-1.png)
+![plot of chunk ratings](/ad1-blog/figure/source/dados-de-series/2017-07-08-dados-de-series/ratings-1.png)
 
 Como se pode ver nos gráficos acima todas as séries apresentam irregularidade nas notas dos episódios, os graficos sao formados por constantes vales e picos. É possível ver que os episódios iniciais das séries não tem as melhores nem as piores notas e que as notas dos episódios finais de Sherlock e How I Met Your Mother caíram com relação aos episódios anteriores. Com base no intervalo de variação a série cujas notas menos variaram foi House of Cards, variando 1.7 pontos, a série cujas notas mais variam eh How I Met Your Mother, variando 3.8 pontos.
 
@@ -93,7 +93,7 @@ Com base no intervalo entre a maior e a menor nota se pode dizer que How I Met Y
 draw.season.ratings(sherlock, "Sherlock")
 {% endhighlight %}
 
-![plot of chunk sherlock](/ad1-blogfigure/source/dados-de-series/2017-07-08-dados-de-series/sherlock-1.png)
+![plot of chunk sherlock](/ad1-blog/figure/source/dados-de-series/2017-07-08-dados-de-series/sherlock-1.png)
 
 Com exceção da quarta temporada, o último episódio da temporada de Sherlock sempre recebe a maior nota da temporada. Sempre existe um vale no ponto central da temporada e, como observado anteriormente, o episódio inicial não é nem o melhor nem o pior da temporada. A última temporada parece ser um pouco mais distinta das três temporada anteriores, tem o comportamento mais anormal, não sendo o último episódio o melhor, e a mediana mais baixa das quatros temporadas. Se pode concluir que existe uma certa irregularidade nas notas dos episódios de todas as temporadas e a última temporada aumentou o intervalo entre as notas máxima e mínima por conter o episódio com a avaliação mais baixa.
 
@@ -104,7 +104,7 @@ Com exceção da quarta temporada, o último episódio da temporada de Sherlock 
 draw.season.ratings(hoc, "House of Cards")
 {% endhighlight %}
 
-![plot of chunk hoc](/ad1-blogfigure/source/dados-de-series/2017-07-08-dados-de-series/hoc-1.png)
+![plot of chunk hoc](/ad1-blog/figure/source/dados-de-series/2017-07-08-dados-de-series/hoc-1.png)
 
 A série House of Cards parece apresentar uma tendência positiva, as notas dos episódios parecem, em geral, aumentar durante a temporada. Em 50% dos caso a nota do primeiro episódio é a menor da temporada e em outros 50% a nota do último episódio é a maior da temporada. Em todas as temporadas a nota do último episódio é maior que a do penúltimo. House of Cards aparentar ser uma série com notas regulares, apresentando apenas alguns pouco picos e vales durante suas temporadas.
 
@@ -115,7 +115,7 @@ A série House of Cards parece apresentar uma tendência positiva, as notas dos 
 draw.season.ratings(mf, "Modern Family")
 {% endhighlight %}
 
-![plot of chunk mf](/ad1-blogfigure/source/dados-de-series/2017-07-08-dados-de-series/mf-1.png)
+![plot of chunk mf](/ad1-blog/figure/source/dados-de-series/2017-07-08-dados-de-series/mf-1.png)
 
 Na série Modern Family é possível notar uma leve regularidade entre os episódios de uma temporada. Existem alguns outliers com notas muito altas e outros poucos com notas muito baixas. Porém, em geral, a série parece ser regular com notas variando ao redor de 8 pontos. Em quase todas as temporadas o último episódio tem uma nota maior que o seu antecessor. Em todas as temporadas existe um pico na metade central das notas, ou seja, sempre há um episódio muito bem avaliado no meio da temporada, o que pode ser explicado pelo fato que é comum haver um hiato separando a metade inicial da metade final da série e o episódio anterior ao hiato deve deixar a audiência investida na série para que continue a assisti-la depois da pausa.
 
@@ -126,7 +126,7 @@ Na série Modern Family é possível notar uma leve regularidade entre os episó
 draw.season.ratings(himym, "How I Met Your Mother")
 {% endhighlight %}
 
-![plot of chunk himym](/ad1-blogfigure/source/dados-de-series/2017-07-08-dados-de-series/himym-1.png)
+![plot of chunk himym](/ad1-blog/figure/source/dados-de-series/2017-07-08-dados-de-series/himym-1.png)
 
 Ao observar as 9 temporadas da série How I Met Your Mother é possível perceber a irregularidade dos episódios dentro de uma temporada. Apesar de existirem algumas cadeias regulares de episódios na oitava e nona temporadas, existe uma grande variação de notas, com gráficos formando picos e vales acentuados frequentemente, em todas as temporadas. Se se prestar atenção no intervale de notas das temporadas é perceptível que houve uma diminuição significativa nas notas das últimas três temporadas. Outra prova da irregularidade da série é o fato que a nona temporada contém tanto a nota mais alta quanto a mais baixa de toda a série.
 
