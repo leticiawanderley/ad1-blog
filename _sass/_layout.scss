@@ -73,6 +73,15 @@
 /**
  * Site footer
  */
+ 
+ .footer {
+        padding-bottom: 3em;
+        margin: auto;
+        font-size: 12px;
+        font-family: Open Sans;
+        color: #959595;
+    }
+
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
